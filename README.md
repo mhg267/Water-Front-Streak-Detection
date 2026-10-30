@@ -26,12 +26,26 @@ results/                          created when you run (not tracked by git)
 
 ## Setup
 
+Requires Python 3.11 or newer.
+
+With conda:
+
 ```bash
 conda env create -f environment.yml
 conda activate env_waterflow_detection
 ```
 
-or `pip install -r requirements.txt` in a Python 3.11 environment.
+Without conda (virtual environment in `.venv/`). On Ubuntu/Debian, install the
+venv module first if it is missing: `sudo apt install python3-venv`.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Activate the environment again (`conda activate …` or `source .venv/bin/activate`)
+in every new terminal before running the project.
 
 ## Run
 
